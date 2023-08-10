@@ -1,0 +1,26 @@
+<div class="pricing card">
+  <div class="card-body">
+    <div class="prices text-dark">
+      <div class="price price-show">
+        <span class="price-currency">$</span>
+        <span class="price-value">{{ priceShow }}</span>
+        <span class="price-duration">{{ duration }}</span>
+      </div>
+      <div class="price price-hide price-hidden">
+        <span class="price-currency">$</span>
+        <span class="price-value">{{ priceHide }}</span>
+        <span class="price-duration">{{ duration }}</span>
+      </div>
+    </div>
+    <!--/.prices -->
+    <h4 class="card-title mt-2">{{ title }}</h4>
+    <ul class="icon-list bullet-bg bullet-soft-primary mt-8 mb-9 text-start">
+      <li *ngFor="let feature of features">
+        <i class="uil uil-check"></i><span>{{ feature }}</span>
+      </li>
+    </ul>
+    <a href="#" class="btn btn-primary rounded-pill">Choose Plan</a>
+  </div>
+  <!--/.card-body -->
+</div>
+<!--/.pricing -->

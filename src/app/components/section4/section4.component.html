@@ -1,0 +1,118 @@
+<section class="wrapper bg-gray">
+  <div class="container py-14 pt-md-0 pb-md-17">
+    <div class="row mt-md-n50p text-white text-center">
+      <div class="col-xl-10 mx-auto mb-14 mb-lg-n6">
+        <div class="card image-wrapper bg-full bg-image bg-overlay bg-overlay-400" [style.background-image]="'url(./assets/img/photos/bg2.jpg)'">
+          <div class="card-body p-9 p-xl-12">
+            <div class="row gx-0">
+              <div class="col-xxl-9 mx-auto">
+                <div class="owl-carousel dots-dark gap-small mb-0" data-margin="30">
+                  <app-carousel-quotes *ngFor="let item of carouselItems"
+                                     [quote]="item.quote"
+                                     [name]="item.name"
+                                     [role]="item.role">
+                  </app-carousel-quotes>
+                </div>
+
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row text-center">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <h2 class="fs-15 text-uppercase text-primary mb-3">Our Pricing</h2>
+        <h3 class="display-4 mb-10 px-xl-10">We offer great prices, premium products and quality service for your business.</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+      <div class="col-xl-11 mx-auto">
+        <div class="pricing-wrapper position-relative mb-10 mb-md-14">
+          <div class="shape bg-dot primary rellax w-16 h-18" data-rellax-speed="1" style="top: 2rem; right: -2.4rem;"></div>
+          <div class="shape rounded-circle bg-line primary rellax w-18 h-18 d-none d-lg-block" data-rellax-speed="1" style="bottom: 0.5rem; left: -2.5rem;"></div>
+          <div class="pricing-switcher-wrapper switcher">
+            <p class="mb-0 pe-3">Monthly</p>
+            <div class="pricing-switchers">
+              <div class="pricing-switcher pricing-switcher-active"></div>
+              <div class="pricing-switcher"></div>
+              <div class="switcher-button bg-primary"></div>
+            </div>
+            <p class="mb-0 ps-3">Yearly</p>
+          </div>
+          <div class="row gy-6 mt-3 mt-md-5">
+            <div class="col-md-6 col-lg-4">
+              <app-pricing-card
+                [priceShow]="'$9'"
+                [priceHide]="'$99'"
+                [duration]="'month'"
+                title="Basic Plan"
+                [features]="[
+          '1 Project',
+          '100K API Access',
+          '100MB Storage',
+          'Weekly Reports',
+          '7/24 Support'
+        ]"
+              ></app-pricing-card>
+            </div>
+            <!--/column -->
+            <div class="col-md-6 col-lg-4 popular">
+              <app-pricing-card
+                [priceShow]="'$19'"
+                [priceHide]="'$199'"
+                [duration]="'month'"
+                title="Premium Plan"
+                [features]="[
+          '5 Projects',
+          '100K API Access',
+          '200MB Storage',
+          'Weekly Reports',
+          '7/24 Support'
+        ]"
+              ></app-pricing-card>
+            </div>
+            <!--/column -->
+            <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-0">
+              <app-pricing-card
+                [priceShow]="'$49'"
+                [priceHide]="'$499'"
+                [duration]="'month'"
+                title="Corporate Plan"
+                [features]="[
+          '20 Projects',
+          '300K API Access',
+          '500MB Storage',
+          'Weekly Reports',
+          '7/24 Support'
+        ]"
+              ></app-pricing-card>
+            </div>
+            <!--/column -->
+          </div>
+          <!--/.row -->
+        </div>
+
+        <!--/.pricing-wrapper -->
+        <div class="row gx-md-8 gx-xl-12 gy-10">
+          <div class="col-lg-6" *ngFor="let item of faqItems">
+          <app-ticket [faq]="item"></app-ticket>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
