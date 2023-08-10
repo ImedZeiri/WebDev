@@ -27,6 +27,8 @@ import { FigureComponent } from './shared/figure/figure.component';
 import { CarouselQuotesComponent } from './shared/carousel-quotes/carousel-quotes.component';
 import { TicketComponent } from './shared/ticket/ticket.component';
 import { PricingCardComponent } from './shared/pricing-card/pricing-card.component';
+import { WhoWeAre1Component } from './pages/who-we-are1/who-we-are1.component';
+import { WhoWeAre2Component } from './pages/who-we-are2/who-we-are2.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { PricingCardComponent } from './shared/pricing-card/pricing-card.compone
     FigureComponent,
     CarouselQuotesComponent,
     TicketComponent,
-    PricingCardComponent
+    PricingCardComponent,
+    WhoWeAre1Component,
+    WhoWeAre2Component
   ],
   imports: [
     BrowserModule,
